@@ -1,0 +1,47 @@
+
+window:
+  padding:
+    #x: 10
+    y: 10
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 1
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: Fira Code Nerd Font
+    style:  Medium
+  bold:
+    family: Fira Code Nerd Font
+    style:  Bold
+  italic:
+    family: Fira Code Nerd Font
+    style:  Italic
+  bold_italic:
+    family: Fira Code Nerd Font
+    style: Bold Italic
+  size: 11
+draw_bold_text_with_bright_colors: true
+
+import:
+  - ~/.config/alacritty/catppuccin-mocha.yml
+
+selection:
+  save_to_clipboard: false
+
+env:
+  TERM: alacritty
+
+enable_rgb:
+  true
+
+shell:
+  program: /usr/bin/bash
+
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
