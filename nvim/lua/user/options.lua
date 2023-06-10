@@ -15,6 +15,7 @@ vim.opt.mouse = 'a'
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme "catppuccin"
+vim.opt.signcolumn = 'yes:1'
 
 vim.opt.spell = true
 
