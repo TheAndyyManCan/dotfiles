@@ -9,20 +9,21 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.wildmode = 'longest:full,full'
+vim.opt.completeopt = 'menuone,longest,preview'
 
 vim.opt.title = true
 vim.opt.mouse = 'a'
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme "catppuccin"
-vim.opt.signcolumn = 'yes:1'
+vim.opt.signcolumn = 'yes:2'
 
 vim.opt.spell = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.list = true
+--vim.opt.list = true
 vim.opt.fillchars:append({ eob = ' ' })
 
 vim.opt.splitbelow = true
