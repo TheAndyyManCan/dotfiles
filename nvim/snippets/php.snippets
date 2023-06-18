@@ -28,3 +28,16 @@ snippet testa "test method (annotation)"
 	{
 		${0}
 	}
+
+snippet regfield "field for register form"
+    <div class="mb-6">
+    <label for="${1}" class="block mb-2 uppercase font-bold text-xs text-gray-700">
+        ${2}
+    </label>
+    <input class="border border-gray-400 p-2 w-full rounded"
+    type="text"
+    name="${3}"
+    id="${4}"
+    required
+    >
+</div>
