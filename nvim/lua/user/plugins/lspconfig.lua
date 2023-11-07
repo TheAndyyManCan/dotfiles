@@ -49,6 +49,33 @@ require('null-ls').setup({
   },
 })
 
+-- Capabilities required for the visualstudio lsps (css, html, etc)
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+-- Activate LSPs
+-- All LSPs in this list need to be manually installed via NPM/PNPM/whatevs
+local lspconfig = require('lspconfig')
+local servers = { 'tailwindcss', 'tsserver', 'jsonls', 'eslint' }
+for _, lsp in pairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilites = capabilities,
+  }
+end
+
+-- This is an interesting one, for some reason these two LSPs (CSS/HTML) need to
+-- be activated separately outside of the above loop. If someone can tell me why,
+-- send me a note...
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 -- Keymaps
 vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
