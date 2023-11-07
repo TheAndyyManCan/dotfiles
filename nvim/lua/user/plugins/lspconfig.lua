@@ -28,6 +28,9 @@ require('lspconfig').jsonls.setup({
   },
 })
 
+--Ruby
+require('lspconfig').solargraph.setup({ capabilities = capabilities })
+
 -- null-ls
 require('null-ls').setup({
   sources = {

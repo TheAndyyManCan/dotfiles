@@ -64,6 +64,9 @@ use({
 -- Commenting support.
 use('tpope/vim-commentary')
 
+-- Emmet for neovim
+use('mattn/emmet-vim')
+
 -- Automatically set the working directory to the project root.
 use({
   'airblade/vim-rooter',
@@ -287,6 +290,9 @@ use({
     require('user/plugins/vim-test')
   end,
 })
+
+--Prettier
+use('MunifTanjim/prettier.nvim')
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
