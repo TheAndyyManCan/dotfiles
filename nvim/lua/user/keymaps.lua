@@ -16,4 +16,6 @@ vim.keymap.set('n', '<Leader>k', ':nohlseach<CR>')
 vim.keymap.set('i', ';;', '<Esc>A;')
 vim.keymap.set('i', ',,', '<Esc>A,')
 
-
+-- Prettier
+vim.keymap("n", "<leader>re", "<Plug>(Prettier)", opts)
+vim.keymap("v", "<leader>re", ":PrettierFragment<cr>", opts)

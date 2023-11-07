@@ -294,6 +294,13 @@ if packer_bootstrap then
     require('packer').sync()
 end
 
+-- Prettier
+use {
+  'prettier/vim-prettier',
+  run = 'yarn install --frozen-lockfile --production',
+  ft = {'javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}
+}
+
 vim.cmd([[
   augroup packer_user_config
     autocmd!
