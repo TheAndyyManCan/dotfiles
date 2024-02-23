@@ -2,7 +2,7 @@
 require('mason').setup()
 require('mason-lspconfig').setup({ automatic_installation = true })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- PHP
 require('lspconfig').intelephense.setup({ capabilities = capabilities })
@@ -30,6 +30,18 @@ require('lspconfig').jsonls.setup({
 
 --Ruby
 require('lspconfig').solargraph.setup({ capabilities = capabilities })
+
+-- C++
+require('lspconfig').clangd.setup({
+    on_attach = function(client, bufnr)
+      client.server_capabilities.signatureHelpProvider = false
+      on_attach(client, bufnr)
+    end,
+    capabilities = capabilities,
+  })
+
+-- Java
+require('lspconfig').jdtls.setup({ capabilities = capabilities })
 
 -- null-ls
 require('null-ls').setup({
@@ -87,7 +99,7 @@ vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 --Commands
-vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
+-- vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
 
 -- Diagnostic configuration
 vim.diagnostic.config({

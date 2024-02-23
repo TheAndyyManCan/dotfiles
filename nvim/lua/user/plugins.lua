@@ -307,6 +307,10 @@ use {
   ft = {'javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}
 }
 
+-- Deoplete
+use ('Shougo/deoplete.nvim')
+use ('zchee/deoplete-clang')
+
 vim.cmd([[
   augroup packer_user_config
     autocmd!
