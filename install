@@ -8,6 +8,8 @@ rm -rf $HOME/.config/nvim
 rm -rf $HOME/.config/tmux
 rm -rf $HOME/.config/phpactor
 rm -rf $HOME/.config/waybar
+rm -rf $HOME/.config/kitty
+rm -rf $HOME/.config/picom
 
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 ln -s $DOTFILES/polybar $HOME/.config/polybar
@@ -15,3 +17,5 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 ln -s $DOTFILES/tmux $HOME/.config/tmux
 ln -s $DOTFILES/phpactpr $HOME/.config/phpactor
 ln -s $DOTFILES/waybar $HOME/.config/waybar
+ln -s $DOTFILES/kitty $HOME/.config/kitty
+ln -s $DOTFILES/picom $HOME/.config/picom

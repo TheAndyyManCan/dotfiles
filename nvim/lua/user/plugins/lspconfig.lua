@@ -8,12 +8,15 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 require('lspconfig').intelephense.setup({ capabilities = capabilities })
 
 -- Vue, JavaScript, TypeScript
-require('lspconfig').volar.setup({
-  capabilities = capabilities,
-  -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
-  -- This drastically improves the responsiveness of diagnostic updates on change
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-})
+-- require('lspconfig').volar.setup({
+--   capabilities = capabilities,
+--   -- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
+--   -- This drastically improves the responsiveness of diagnostic updates on change
+--   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+-- })
+
+-- Angular
+require('lspconfig').angularls.setup({ capabilities = capabilities })
 
 -- Tailwind CSS
 require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
@@ -103,7 +106,9 @@ vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 -- Diagnostic configuration
 vim.diagnostic.config({
-  virtual_text = false,
+  virtual_text = true,
+  signs = true,
+  underline = true,
   float = {
     source = true,
   }

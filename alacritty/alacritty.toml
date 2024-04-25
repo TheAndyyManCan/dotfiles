@@ -11,19 +11,19 @@ TERM = "alacritty"
 size = 11
 
 [font.bold]
-family = "Fira Code Nerd Font"
+family = "MonoLisa"
 style = "Bold"
 
 [font.bold_italic]
-family = "Fira Code Nerd Font"
+family = "MonoLisa"
 style = "Bold Italic"
 
 [font.italic]
-family = "Fira Code Nerd Font"
+family = "MonoLisa"
 style = "Italic"
 
 [font.normal]
-family = "Fira Code Nerd Font"
+family = "MonoLisa"
 style = "Medium"
 
 [font.offset]

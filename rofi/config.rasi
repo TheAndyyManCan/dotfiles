@@ -12,7 +12,7 @@ configuration{
     display-window: " 﩯  Window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
-    font: 'Fira Code 12';
+    font: 'MonoLisa 12';
 }
 
 @theme "catppuccin-mocha"
