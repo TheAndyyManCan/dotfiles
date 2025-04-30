@@ -324,6 +324,38 @@ use({'folke/trouble.nvim',
     end,
 })
 
+-- Dependencies for avante
+use 'stevearc/dressing.nvim'
+use 'nvim-lua/plenary.nvim'
+use 'MunifTanjim/nui.nvim'
+use 'MeanderingProgrammer/render-markdown.nvim'
+use 'HakonHarnes/img-clip.nvim'
+
+use {
+  'zbirenbaum/copilot.lua',
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({})
+  end,
+}
+
+-- Avante for AI functionality
+use({'yetone/avante.nvim',
+  branch = 'main',
+  run = 'make',
+  config = function()
+    require('avante').setup()
+  end,
+})
+
+-- Activity Watcher plugin
+-- use({'vonpb/aw-watcher.nvim',
+--   -- config = function()
+--   --   require("aw-watcher").setup()
+--   -- end,
+-- })
+
 vim.cmd([[
   augroup packer_user_config
     autocmd!
