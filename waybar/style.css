@@ -20,7 +20,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-    color: transparent;
+	color: white;
 	background: transparent;
 }
 #tags {
@@ -244,4 +244,18 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #F2CDCD;
+}
+
+#workspaces {
+	color: white;
+}
+
+#workspaces button {
+	padding: 0 1em;
+	color: white;
+	margin: 0 0.25em;
+}
+
+#workspaces button:hover {
+	color: black;
 }
