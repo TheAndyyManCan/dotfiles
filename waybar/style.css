@@ -1,7 +1,8 @@
 * {
 	border: none;
 	border-radius: 10;
-    font-family: "JetbrainsMono Nerd Font" ;
+    font-family: "MonoLisa" ;
+    font-weight: 700;
 	font-size: 15px;
 	min-height: 10px;
 }
@@ -20,7 +21,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: white;
+	color: #cdd6f4;
 	background: transparent;
 }
 #tags {
@@ -247,7 +248,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	color: white;
+	color: #cdd6f4;
 }
 
 #workspaces button {
