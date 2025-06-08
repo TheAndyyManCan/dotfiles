@@ -10,7 +10,7 @@ function map(mode, lhs, rhs, opts)
 end
 
 -- Colemak: hjkl>mnei, i>t
-map("n", "m", "h")          -- move Left
+map("n", "m", "h", { nowait = true })          -- move Left
 map("n", "n", "gj")         -- move Down (g to allow move within wrapped lines)
 map("n", "e", "gk")         -- move Up (g to allow move within wrapped lines)
 map("n", "i", "l")          -- move Right
@@ -24,7 +24,7 @@ map("n", "H", "N")          -- previous match   replaces (N) prev
 
 
 -- Visual Colemak
-map("v", "m", "h")          -- move Left
+map("v", "m", "h", { nowait = true })          -- move Left
 map("v", "n", "gj")         -- move Down (g to allow move within wrapped lines)
 map("v", "e", "gk")         -- move Up (g to allow move within wrapped lines)
 map("v", "I", "l")          -- move Right - shifted to fix [v]isual[i]n[...]
@@ -63,3 +63,11 @@ vim.keymap.set('i', ',,', '<Esc>A,')
 -- Prettier
 vim.keymap.set("n", "<leader>re", "<Plug>(Prettier)", opts)
 vim.keymap.set("v", "<leader>re", ":PrettierFragment<cr>", opts)
+
+-- vim.g.copilot_no_tab_map = true
+-- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', {
+--   expr = true,
+--   silent = true,
+--   noremap = true,
+--   replace_keycodes = false,
+-- })
