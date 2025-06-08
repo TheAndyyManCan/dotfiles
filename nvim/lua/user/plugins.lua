@@ -331,12 +331,26 @@ use 'MunifTanjim/nui.nvim'
 use 'MeanderingProgrammer/render-markdown.nvim'
 use 'HakonHarnes/img-clip.nvim'
 
+-- use {
+--   'zbirenbaum/copilot.lua',
+--   cmd = "Copilot",
+--   event = "InsertEnter",
+--   config = function()
+--     require("copilot").setup({})
+--   end,
+-- }
+
 use {
-  'zbirenbaum/copilot.lua',
-  cmd = "Copilot",
+  "github/copilot.vim",
   event = "InsertEnter",
   config = function()
-    require("copilot").setup({})
+    vim.g.copilot_no_tab_map = true
+    vim.keymap.set('i', '<C-j>', 'copilot#Accept("<CR>")', {
+      expr = true,
+      silent = true,
+      noremap = true,
+      replace_keycodes = false,
+    })
   end,
 }
 
