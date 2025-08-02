@@ -46,6 +46,13 @@ require('lspconfig').clangd.setup({
 -- Java
 require('lspconfig').jdtls.setup({ capabilities = capabilities })
 
+-- Flutter
+require("flutter-tools").setup {
+  lsp = {
+    capabilities = capabilities
+  }
+}
+
 -- null-ls
 -- require('null-ls').setup({
 --   sources = {

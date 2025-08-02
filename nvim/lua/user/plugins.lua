@@ -363,6 +363,17 @@ use({'yetone/avante.nvim',
   end,
 })
 
+use({
+  'akinsho/flutter-tools.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'stevearc/dressing.nvim', -- already used
+  },
+  config = function()
+    require('user/plugins/flutter-tools')
+  end,
+})
+
 -- Activity Watcher plugin
 -- use({'vonpb/aw-watcher.nvim',
 --   -- config = function()
